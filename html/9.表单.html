@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+
+<body>
+    <form action="www.xxx.php" method="post">
+        <h3> 一、input表单控件 </h3>
+
+        <!-- text 文本框 用户可以输入文本 -->
+        <!-- 显示label for & id -->
+        <label for="username">用户名：</label><input type="text" name="username" value="请输入用户值" maxlength="10"
+            id="username"> <br>
+        <!-- password 密码框 用户看不见输入值 -->
+        <!-- 隐式label <label>被包含的所有</label> -->
+        <label>密码： <input type="password" name="pwd"></label> <br>
+
+        <!-- name 表单元素名字 同一组按钮必须有相同的name 才可以实现多选一 -->
+        <!-- value 表单元素的值 -->
+        <!-- checked 默认选中 单选/多选按钮可用 -->
+        <!-- radio 单选按钮 可以实现多选一 -->
+        性别：男<input type="radio" name="sex" value="男"> 女<input type="radio" name="sex" value="女" checked="checked">
+        <br>
+        <!-- checkbox 多选按钮 可以实现多选 -->
+        爱好：吃饭<input type="checkbox" name="hobby" value="eat"> 睡觉<input type="checkbox" name="hobby" value="sleep"
+            checked="checked">
+        打豆豆<input type="checkbox" name="hobby" value="hit" checked="checked"> <br>
+
+        <!-- button 普通按钮 后期搭配js使用 -->
+        <input type="button" value="发送短信"> <br>
+        <!-- file 文件域 上传文件 -->
+        上传头像：<input type="file"> <br>
+
+        <!-- sbumit 点击后将表单域内容提交到服务器 -->
+        <input type="submit" value="免费注册">
+        <!-- reset 重新设置所有内容 -->
+        <input type="reset" value="重新填写">
+
+        <h3>二、select表单控件</h3>
+        籍贯：
+        <select>
+            <option>广东</option>
+            <option selected="selected">北京</option>
+            <option>上海</option>
+            <option>西藏</option>
+        </select>
+
+        <h3>三、textarea表单控件</h3>
+        今日反馈：
+        <textarea cols="50" rows="5">默认值
+        </textarea>
+    </form>
+</body>
+
+</html>
