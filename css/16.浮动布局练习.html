@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动布局练习</title>
+    <style>
+        .box {
+            width: 1200px;
+            height: 200px;
+            background-color: pink;
+            margin: 20px auto;
+        }
+
+        .box .left {
+            float: left;
+            width: 230px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .box .right {
+            float: left;
+            width: 970px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        /* 2. */
+        li {
+            list-style: none;
+        }
+
+        .box2 {
+            width: 1226px;
+            height: 285px;
+            background-color: pink;
+            margin: 20px auto;
+        }
+
+        .box2 li {
+            width: 296px;
+            height: 285px;
+            background-color: skyblue;
+            float: left;
+            margin-right: 14px;
+        }
+
+        /* 要注意权重问题 一定要有.box2 */
+        .box2 .last-li {
+            margin-right: 0;
+        }
+
+        /* 3. */
+        .box3 {
+            width: 1226px;
+            height: 615px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .left {
+            float: left;
+            width: 234px;
+            height: 615px;
+            background-color: purple;
+        }
+
+        .right {
+            float: left;
+            width: 992px;
+            height: 615px;
+            background-color: skyblue;
+        }
+
+        .right>div {
+            float: left;
+            width: 234px;
+            height: 300px;
+            background-color: pink;
+            margin-left: 14px;
+            margin-bottom: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">左侧</div>
+        <div class="right">右侧</div>
+    </div>
+
+    <div class="box2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last-li">4</li>
+    </div>
+
+    <div class="box3">
+        <div class="left">左青龙</div>
+        <div class="right">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+    <br>
+</body>
+
+</html>

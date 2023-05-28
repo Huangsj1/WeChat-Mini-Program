@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 1.后代选择器 */
+        ol li {
+            color: pink;
+        }
+
+        ul a {
+            color: red;
+        }
+
+        .nav a {
+            color: purple;
+        }
+
+        /* 2.子选择器 */
+        .son-select>a {
+            color: green;
+        }
+
+        /* 3.并集选择器 */
+        .bear1,
+        .bear2,
+        .pig li {
+            color: pink;
+        }
+
+        /* 4.伪类选择器 */
+        /* 4.1.链接伪类选择器 */
+        /* 未访问的链接 */
+        a:link {
+            color: orange;
+            text-decoration: none;
+        }
+
+        /* 访问过的链接 */
+        a:visited {
+            color: blue;
+        }
+
+        /* 鼠标经过的链接 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 鼠标按住不放的链接 */
+        a:active {
+            color: green;
+        }
+
+        /* 4.2.:focus伪类选择器 */
+        input:focus {
+            background-color: greenyellow;
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- 1.后代选择器 -->
+    <ol>
+        <li>我是ol的孩子1</li>
+        <li>我是ol的孩子2</li>
+        <li>我是ol的孩子3</li>
+    </ol>
+    <ul>
+        <li>我是ul的孩子1</li>
+        <li>我是ul的孩子2</li>
+        <li><a href=#>我是ul的孙子</a></li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul2的孩子1</li>
+        <li>我是ul2的孩子2</li>
+        <li><a href=#>我是ul2的孙子</a></li>
+    </ul>
+
+    <!-- 2.子选择器 -->
+    <div class="son-select">
+        <a href="#">我是儿子1</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+        <a href="#">我是儿子2</a>
+    </div><br>
+
+    <!-- 3.并集选择器 -->
+    <div class="bear1">熊大</div>
+    <p class="bear2">熊二</p>
+    <span>光头强</span>
+    <ul class="pig">
+        <li>猪1</li>
+        <li>猪2</li>
+        <li>猪3</li>
+    </ul>
+
+    <!-- 4.伪类选择器 -->
+    <!-- 4.1链接伪类选择器 -->
+    <a href="http://www.xxx.com" target="_bal
+    ">未访问的链接</a><br>
+    <a href="#" target="_bl
+    ">小猪佩奇</a><br>
+    <!-- 4.2:focus伪类选择器 -->
+    <input type="text">
+</body>
+
+</html>

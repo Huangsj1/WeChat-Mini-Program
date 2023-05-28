@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 3.伪元素清除法 */
+        /* .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        } */
+
+        /* 4.双伪元素清除法 */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 980px;
+            /* height: 300px; */
+            margin: 0 auto;
+            background-color: pink;
+            /* 2.父级添加overflow属性 */
+            /* overflow: hidden; */
+        }
+
+        /* box内部有多个float的li */
+        .box li {
+            float: left;
+            width: 236px;
+            height: 300px;
+            background-color: gray;
+            margin-right: 12px;
+        }
+
+        /* 最后一个右边距为0 */
+        .box .last {
+            margin-right: 0;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+        <!-- 1.额外标签法 -->
+        <!-- <div style=" clear:both;"></div> -->
+    </div>
+    <div class="footer">foot</div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emmet语法</title>
+    <style>
+        .one {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1.直接输入标签名再Tab(div+Tab) -->
+    <div>1</div>
+
+    <!-- 2.输入标签名*n即可显示n个对应标签(div*3) -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <!-- 3.包含关系可以直接用">"生成(ul>li) -->
+    <ul>
+        <li>1</li>
+    </ul>
+
+    <!-- 4.兄弟关系直接用"+"生成(div+p) -->
+    <div>1</div>
+    <p>2</p>
+
+    <!-- 5.生成带有类名/id的标签"标签名.class_name" / "标签名#id_name"(div.nav, p#one; 如果不加标签名默认为div) -->
+    <div class="nav">nav</div>
+    <p id="one">one</p>
+
+    <!-- 6.$自增符号,从1到n,配合*n使用(.demo$*5) -->
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+
+    <!-- 7.生成的标签里面默认带有文字"标签{需要的文字}"(div{文字}, div{文字$}) -->
+    <div>文字</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+
+</html>

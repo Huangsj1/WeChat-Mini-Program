@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体属性</title>
+    <style>
+        /* 1.字体类型 */
+        p {
+            font-family: 'Courier New', Courier, monospace
+        }
+
+        /* 2.字体大小 */
+        body {
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        /* 3.字体粗细 */
+        .normal {
+            font-weight: normal;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .bolder {
+            font-weight: bolder;
+        }
+
+        .lighter {
+            font-weight: lighter;
+        }
+
+        .weight-def {
+            font-weight: 900;
+        }
+
+        /* 4.字体样式 */
+        .italic {
+            font-style: italic;
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        /* 5.复合属性 */
+        .complex {
+            font: italic bold 5px 'Microsoft yahei';
+        }
+    </style>
+</head>
+
+<body>
+    <h4>一、字体属性</h4>
+    默认字体
+    <p>其他字体</p>
+
+    <h4>二、字体大小</h4>
+    body内全部大小改为20px,除了标题外
+
+    <h4 class="normal">三、字体粗细</h4>
+    <p>这是正常字体</p>
+    <p class="bold">加粗字体</p>
+    <p class="bolder">特粗字体</p>
+    <p class="weight-def">自定义最粗字体</p>
+    <p class="lighter">细体</p>
+
+    <h4>四、字体样式</h4>
+    <p>正常字体</p>
+    <p class="italic">倾斜字体</p>
+    <p><em>em字体脉动回来</em></p>
+
+    <h4>五、字体复合属性</h4>
+    <p class="complex">复合属性字体</p>
+</body>
+
+</html>

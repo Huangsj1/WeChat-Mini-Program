@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9126c2fbef523cf6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 日记/2023_05_23 周二.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "d6fae9bde44e3161",
             "type": "leaf",
             "state": {
@@ -42,9 +30,57 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0e727d8dc301cc7d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/CSS/1.基础选择器-字体-文本.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "70bd4909a96cb793",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/CSS/2.复合选择器-元素类型-背景.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cbb27d64aa580195",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/CSS/3.三大特性-盒子-浮动.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "96159ec7ad8161fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/CSS/Ⅰ.学成在线案例.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -119,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端/HTML/2.表格列表.md",
+                "file": "前端/CSS/3.三大特性-盒子-浮动.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端/HTML/2.表格列表.md",
+                "file": "前端/CSS/3.三大特性-盒子-浮动.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端/HTML/2.表格列表.md"
+                "file": "前端/CSS/3.三大特性-盒子-浮动.md"
               }
             }
           },
@@ -190,14 +226,24 @@
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-memos:Memos": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-memos:Memos": false
     }
   },
-  "active": "f16cc22f5f435c55",
+  "active": "cbb27d64aa580195",
   "lastOpenFiles": [
-    "前端/HTML/1.基本标签.md",
+    "前端/CSS/Ⅰ.学成在线案例.md",
+    "前端/CSS/3.三大特性-盒子-浮动.md",
+    "前端/CSS/2.复合选择器-元素类型-背景.md",
+    "attachment/Pasted image 20230528110705.png",
+    "attachment/Pasted image 20230528110544.png",
+    "前端/CSS/1.基础选择器-字体-文本.md",
     "前端/HTML/2.表格列表.md",
+    "attachment/Pasted image 20230527172606.png",
+    "attachment/Pasted image 20230527161601.png",
+    "前端/HTML/1.基本标签.md",
+    "未命名",
+    "前端/CSS",
     "01 日记/2023_05_23 周二.md",
     "attachment/Pasted image 20230523205723.png",
     "前端/HTML",

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三大特性</title>
+    <style>
+        /* 1.层叠性 */
+        /* div {
+            color: red;
+        }
+
+        div {
+            color: pink;
+        } */
+
+        /* 2.继承性 */
+        /* body {
+            color: pink;
+            font: 12px/1.5 'Microsoft Yahei';
+        }
+
+        div {
+            font-size: 14px;
+        } */
+
+        /* 3.优先级 */
+        a {
+            color: yellow;
+        }
+
+        a {
+            color: red !important;
+        }
+
+        #pink-id {
+            color: purple;
+        }
+
+        .pink-class {
+            color: skyblue;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        /* 权重叠加 */
+        /* 0,0,0,1 */
+        li {
+            color: red;
+        }
+
+        /* 0,0,0,1 + 0,0,0,1 = 0,0,0,2 */
+        ul li {
+            color: pink;
+        }
+
+        /* 0,0,1,0 + 0,0,1,0 = 0,0,2,0 */
+        .ul-class .li-class {
+            color: blue;
+        }
+
+        /* 0,1,0,0 + 0,0,0,1 = 0,1,0,1 */
+        #ul-id li {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="pink-class" id="pink-id" style="color: green
+    ">
+        粉红色的div
+    </a>
+    <p>粉红色的段落</p>
+    <ul class="ul-class" id="ul-id">
+        <li class="li-class">我是li</li>
+    </ul>
+</body>
+
+</html>
