@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* 一、属性选择器 */
+        /* 1.input中具有value属性的元素 */
+        input[value] {
+            color: pink;
+        }
+
+        /* 2.input中具有type=text的元素 */
+        input[type="text"] {
+            color: pink;
+        }
+
+        /* 3.class以icon开头的元素 */
+        div[class^="icon"] {
+            color: skyblue;
+        }
+
+        /* 4.class以data结尾的元素 */
+        div[class$="data"] {
+            color: yellowgreen;
+        }
+
+        /* 5.class中包含ccon的元素 */
+        div[class*="ccon"] {
+            color: purple;
+        }
+
+        .border {
+            height: 10px;
+            margin: 100px auto;
+        }
+
+        /* 二、结构伪类选择器 */
+        /* 1.选择第一个孩子 */
+        ul li:first-child {
+            background-color: pink;
+        }
+
+        /* 2.选择最后一个孩子 */
+        ul li:last-child {
+            background-color: skyblue;
+        }
+
+        /* 3.选择第n个孩子(下标从1开始) */
+        ul li:nth-child(3) {
+            background-color: yellowgreen;
+        }
+
+        /* n除了是数字，还可以是关键字(even,odd) */
+        ul li:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        /* n还可以是公式(一定要有n) n会从0到n */
+        ol li:nth-child(3n+1) {
+            background-color: pink;
+        }
+
+        /* 不会变色 */
+        /* nth-child会将所有子盒子排序
+        执行时先看 :nth-child(n) 再看前面的div 
+        如果第n个不是div就不会修改样式*/
+        section div:nth-child(1) {
+            background-color: yellow;
+        }
+
+        /* 变色 */
+        /* nth-of-type会将指定元素的子盒子排序
+        执行时先看 div 再看后面的 :nth-child(n）*/
+        section div:nth-of-type(1) {
+            background-color: plum;
+        }
+
+        section {
+            margin: 30px auto;
+        }
+
+        /* 三、伪元素选择器 */
+        .fake {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .fake::before {
+            /* 必须有content */
+            content: '我';
+        }
+
+        .fake::after {
+            content: '小猪🐖';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 一、属性选择器 -->
+    <!-- 1.选择具有某个属性的元素 -->
+    <input type="text" value="请输入">
+    <input type="text">
+    <br>
+    <!-- 2.选择属性=值的元素 -->
+    <input type="text">
+    <input type="password">
+    <br>
+    <!-- 3.选择属性以值开头的元素 -->
+    <div class="icon1">小图标1</div>
+    <div class="icon2">小图标2</div>
+    <div class="icon3">小图标3</div>
+    <div class="icon4">小图标4</div>
+
+    <!-- 4.选择属性以值结尾的元素 -->
+    <div class="icon1-data">图标1</div>
+    <div class="icon2-data">图标2</div>
+    <div class="icon3-ico">图标3</div>
+
+    <!-- 5.选择属性中包含值得元素 -->
+    <div class="iccon1">图图标1</div>
+    <div class="iccon2">图图标2</div>
+    <div class="iccon3">图图标3</div>
+
+    <div class="border"></div>
+
+    <!-- 二、结构伪类选择器 -->
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+
+    <!-- 三、伪元素选择器 -->
+    <div class="fake"> 是 </div>
+</body>
+
+</html>

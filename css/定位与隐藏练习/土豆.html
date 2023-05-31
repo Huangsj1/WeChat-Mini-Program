@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆练习</title>
+    <style>
+        .tudou {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .tudou img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 最初做法：多加一个盒子作为遮罩层 */
+        /* .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+        }
+
+        .tudou:hover .mask {
+            display: block;
+        } */
+
+        /* 因为mask所在的div已经变成absolute不占位置了，所以鼠标经过不了他的位置 */
+        /* .mask:hover {
+            display: block;
+        } */
+
+        /* 改进做法：伪元素 */
+        .tudou::before {
+            /* 一定有内容 */
+            content: '';
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+        }
+
+        .tudou:hover::before {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <!-- <div class="mask"></div> -->
+        <img src="images/tudou.jpg" alt="">
+    </div>
+</body>
+
+</html>

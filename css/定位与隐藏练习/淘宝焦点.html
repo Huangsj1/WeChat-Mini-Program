@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝焦点图</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .tb-promo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 使用并集选择器集中相同特性 */
+        .prev,
+        .next {
+            position: absolute;
+            /* 垂直居中 */
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, .5);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            line-height: 30px;
+        }
+
+        .prev {
+            left: 0;
+            /* 圆角按钮 */
+            border-radius: 0 15px 15px 0;
+        }
+
+        .next {
+            right: 0;
+            /* 圆角按钮 */
+            border-radius: 15px 0 0 15px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+        .promo-nav li {
+            float: left;
+            height: 8px;
+            width: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        .promo-nav .selected {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="images/tb.jpg" alt="">
+        <!-- 左侧按钮 -->
+        <a href="#" class="prev"> &lt; </a>
+        <!-- 右侧按钮 -->
+        <a href="#" class="next"> &gt; </a>
+        <!-- 下面小圆点 -->
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

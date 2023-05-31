@@ -120,6 +120,10 @@ a {
     color: #666;
 }
 
+.user img {
+    vertical-align: middle;
+}
+
 /* ---------------------banner区域--------- */
 .banner {
     height: 421px;
@@ -278,6 +282,7 @@ a {
 }
 
 .box-bd ul li {
+    position: relative;
     float: left;
     width: 228px;
     height: 270px;
@@ -286,9 +291,15 @@ a {
     margin-bottom: 15px;
 }
 
-.box-bd ul li img {
+.box-bd ul li>img {
     /* 宽度和父亲一样宽 */
     width: 100%;
+}
+
+.box-bd ul li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
 }
 
 .box-bd ul li h4 {

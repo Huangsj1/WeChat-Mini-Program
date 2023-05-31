@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标样式</title>
+    <style>
+        img {
+            /* margin-top: 100px; */
+            width: 200px;
+            height: 160px;
+            /* vertical-align: baseline; */
+            /* vertical-align: bottom; */
+            vertical-align: middle;
+        }
+
+        .row {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /* white-space: normal; */
+            /* 1.强制一行内显示文字 */
+            white-space: nowrap;
+            /* 2.溢出的部分隐藏起来 */
+            overflow: hidden;
+            /* 3.文字用省略号替代超出的部分 */
+            text-overflow: ellipsis;
+        }
+
+        .rows {
+            width: 150px;
+            height: 45px;
+            background-color: pink;
+
+            /* 1.溢出部分隐藏 */
+            overflow: hidden;
+            /* 2.文字省略号表示 */
+            text-overflow: ellipsis;
+            /* 3.弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 4.限制在一个块元素显示的文本行数 */
+            -webkit-line-clamp: 2;
+            /* 5.设置伸缩盒子对象的子元素的排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1.鼠标样式 -->
+    <ul>
+        <li style="cursor: default;">default默认小白</li>
+        <li style="cursor: pointer;">pointer小手</li>
+        <li style="cursor: text">text文本</li>
+        <li style="cursor: move">move移动</li>
+        <li style="cursor: not-allowed;">not-allowed禁止</li>
+    </ul>
+
+    <!-- 2.轮廓线outline -->
+    <input type="text">
+    <input type="text" style="outline: none;">
+
+    <!-- 3.防止拖拽文本域resize -->
+    <textarea name="" id="" cols="30" rows="10" style="resize: none"></textarea>
+
+    <!-- 4.图片文字垂直居中对齐 -->
+    <div>
+        <img src="box_modle.jpg" alt=""> pink老师
+    </div>
+
+    <!-- 5.溢出文字换行 -->
+    <!-- 5.1.单行文字 -->
+    <div class="row">
+        啥也不说，此处省略一万字
+    </div>
+    <!-- 5.2.多行文字 -->
+    <div class="rows">
+        啥也不想说，此处省略一万万万万万万万万万字
+    </div>
+</body>
+
+</html>

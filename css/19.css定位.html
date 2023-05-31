@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        body {
+            height: 4000px;
+        }
+
+        div {
+            width: 300px;
+            height: 200px;
+        }
+
+        /* 1.相对定位 */
+        .box1 {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            background-color: pink;
+        }
+
+        .box2 {
+            background-color: skyblue;
+        }
+
+        /* 2.绝对定位 */
+        .father {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            background-color: yellowgreen;
+            padding: 30px;
+            border: 20px solid blue;
+            margin-bottom: 100px;
+        }
+
+        .son {
+            position: absolute;
+            /* top: 20px; */
+            /* left: 30px; */
+            bottom: 1px;
+            right: 5px;
+            background-color: purple;
+        }
+
+        /* 3.固定定位 */
+        .fix-pos {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 80px;
+        }
+
+        .fix-pos img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .w {
+            width: 800px;
+            height: 1400px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 70%;
+            left: 50%;
+            margin-left: 405px;
+            width: 50px;
+            height: 150px;
+            background-color: skyblue;
+        }
+
+        /* 4.粘性定位 */
+        .nav {
+            position: sticky;
+            top: 10px;
+            width: 800px;
+            height: 50px;
+            background-color: rgba(179, 255, 0, 0.932);
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <div class="fix-pos">
+        <img src="box_modle.jpg" alt="">
+    </div>
+    <div class="fixed"></div>
+    <div class="w">版心盒子 800像素</div>
+
+    <div class="nav">我是导航栏</div>
+</body>
+
+</html>

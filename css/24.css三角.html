@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角</title>
+    <style>
+        .box1 {
+            width: 0px;
+            height: 0px;
+            border-top: 100px solid pink;
+            border-bottom: 100px solid skyblue;
+            border-left: 100px solid purple;
+            border-right: 100px solid palegreen;
+            margin-bottom: 100px;
+        }
+
+        .tritangle {
+            width: 0;
+            height: 0;
+            border: 30px solid transparent;
+            border-top-color: pink;
+            margin: 100px auto;
+        }
+
+        .jd {
+            position: relative;
+            width: 120px;
+            height: 249px;
+            background-color: pink;
+        }
+
+        .jd span {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: pink;
+        }
+
+        /* 直角三角形 */
+        .box2 {
+            width: 0;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-right: 50px solid skyblue;
+            border-bottom: 0 solid blue;
+            border-left: 0 solid green;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="tritangle"></div>
+    <div class="jd">
+        <span></span>
+    </div>
+    <div class="box2"></div>
+</body>
+
+</html>
