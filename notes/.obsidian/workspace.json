@@ -8,6 +8,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "20b656ed682f9fb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/CSS/3.三大特性-盒子-浮动-定位-隐藏.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "c6c43d936a6141fd",
             "type": "leaf",
             "state": {
@@ -18,20 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "1acf66dcd4150de2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/CSS/3.三大特性-盒子-浮动-定位-隐藏.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,10 +184,14 @@
   },
   "active": "c6c43d936a6141fd",
   "lastOpenFiles": [
+    "attachment/Pasted image 20230601202215.png",
+    "attachment/Pasted image 20230601202211.png",
+    "attachment/Pasted image 20230601122828.png",
     "前端/CSS/3.三大特性-盒子-浮动-定位-隐藏.md",
-    "前端/CSS/Ⅱ.品优购案例.md",
-    "前端/CSS/5.THML5新样式-CSS3新样式.md",
     "前端/CSS/4.精灵图-字体图标-三角绘制-其他样式与技巧.md",
+    "前端/CSS/5.THML5新样式-CSS3新样式.md",
+    "attachment/Pasted image 20230601090416.png",
+    "前端/CSS/Ⅱ.品优购案例.md",
     "前端/HTML/1.基本标签.md",
     "前端/CSS/2.复合选择器-元素类型-背景.md",
     "前端/CSS/Ⅰ.学成在线案例.md",
@@ -199,9 +204,6 @@
     "前端/CSS/1.基础选择器-字体-文本.md",
     "attachment/Pasted image 20230529214050.png",
     "attachment/Pasted image 20230529210749.png",
-    "attachment/Pasted image 20230529210731.png",
-    "attachment/Pasted image 20230529194849.png",
-    "attachment/Pasted image 20230529194146.png",
     "未命名",
     "前端/CSS",
     "01 日记/2023_05_23 周二.md",
@@ -227,7 +229,6 @@
     "未命名.canvas",
     "Hello World.md",
     "00 Inbox/图片地址src.md",
-    "00 Inbox/链接的地址.md",
     "attachment",
     "00 Inbox"
   ]

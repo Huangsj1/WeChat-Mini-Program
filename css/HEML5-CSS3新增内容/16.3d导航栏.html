@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            margin: 100px;
+        }
+
+        ul li {
+            float: left;
+            width: 120px;
+            height: 35px;
+            /* 3d视角看 */
+            perspective: 400px;
+            margin: 10px 20px;
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            /* 保留子元素的3d */
+            transform-style: preserve-3d;
+            transition: all .8s;
+        }
+
+        /* 注意：旋转盒子绕的是box盒子？ */
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+        .front,
+        .bottom {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            line-height: 35px;
+            color: #fff;
+        }
+
+        .front {
+            background-color: pink;
+            /* 提高z轴的优先级显示在前面 */
+            z-index: 1;
+            /* 前面的边要往前移使得box盒子旋转的时候能绕着中心点旋转来显示出立体效果 */
+            transform: translateZ(17.5px);
+        }
+
+        .bottom {
+            background-color: purple;
+            /* 先沿着y轴往下走到底面, 再先向下旋转 */
+            transform: translateY(17.5px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">来黑马</div>
+                <div class="bottom">找Pink老师</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">来黑马</div>
+                <div class="bottom">找Pink老师</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">来黑马</div>
+                <div class="bottom">找Pink老师</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">来黑马</div>
+                <div class="bottom">找Pink老师</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

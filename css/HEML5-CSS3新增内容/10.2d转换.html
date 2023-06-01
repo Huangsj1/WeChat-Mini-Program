@@ -36,7 +36,7 @@
         }
 
         /* 2.rotate旋转 */
-        img {
+        .rot_img {
             width: 20%;
             height: 20%;
             border-radius: 50%;
@@ -45,10 +45,97 @@
             /* transform: rotate(45deg); */
             /* 过渡旋转 */
             transition: transform 2s;
+            margin-bottom: 30px;
         }
 
-        img:hover {
+        .rot_img:hover {
             transform: rotate(360deg);
+        }
+
+        .tri {
+            position: relative;
+            width: 249px;
+            height: 35px;
+            border: 1px solid #000;
+        }
+
+        .tri::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            transition: all 0.3s;
+        }
+
+        .tri:hover::after {
+            transform: rotate(225deg);
+        }
+
+        .ch_cen {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 30px auto;
+            transition: all 2s;
+            /* 1.默认为 50% 50% 等价于 center center */
+            transform-origin: 20% 10%;
+            /* 2.可以是方位名词 */
+            /* transform-origin: left bottom; */
+            /* 3.可以是px像素（相对左上角） */
+            /* transform-origin: 30px 0; */
+        }
+
+        .ch_cen:hover {
+            transform: rotate(360deg);
+        }
+
+        /* 3.scale缩放 */
+        .scal {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 30px auto;
+            transform-origin: 50% 0;
+            transition: all 1s;
+        }
+
+        .scal:hover {
+            /* 1.里面的数字不跟单位(倍数) */
+            transform: scale(2, 1);
+            /* 2.等比例缩放 */
+            transform: scale(0.3);
+        }
+
+        .pic_big {
+            overflow: hidden;
+        }
+
+        .pic_big img {
+            width: 150px;
+            height: 150px;
+            transition: all .4s;
+        }
+
+        .pic_big img:hover {
+            transform: scale(1.1);
+        }
+
+        /* 4.综合实现 */
+        .all {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 120px auto;
+            transition: all 1s;
+        }
+
+        .all:hover {
+            transform: translate(200%, 100%) rotate(180deg) scale(2);
         }
     </style>
 </head>
@@ -59,7 +146,16 @@
         <div class="small"></div>
     </div>
 
-    <img src="../images/abcd.jpg" alt="">
+    <img src="../images/abcd.jpg" alt="" class="rot_img">
+    <div class="tri"></div>
+    <div class="ch_cen"></div>
+
+    <div class="scal"></div>
+    <div class="pic_big">
+        <a href="#"><img src="../images/abcd.jpg" alt=""></a>
+    </div>
+
+    <div class="all"></div>
 </body>
 
 </html>

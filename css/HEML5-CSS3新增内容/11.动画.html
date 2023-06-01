@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        /* 1.定义动画 */
+        /* from和to等价于 0%和100% */
+        /* 里面的百分比要是整数，是总时间的划分 */
+        @keyframes move {
+
+            /* 开始状态(可以省略) */
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(1000px, 0);
+            }
+
+            50% {
+                transform: translate(1000px, 500px);
+            }
+
+            75% {
+                transform: translate(0, 500px);
+            }
+
+            /* 结束状态 */
+            100% {
+                transform: translate(300px, 300px);
+            }
+        }
+
+        /* 2.使用动画 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 前4个和过渡类似 */
+            /* 1.动画名称 */
+            animation-name: move;
+            /* 2.持续时间(一个周期) */
+            animation-duration: 5s;
+            /* 3.运动曲线 */
+            animation-timing-function: ease;
+            /* 4.动画何时开始 */
+            animation-delay: .5s;
+            /* 5.播放次数(infinite为无限) */
+            /* animation-iteration-count: infinite; */
+            /* 6.是否反方向播放(默认normal是马上返回,alternate为反向) */
+            /* animation-direction: alternate; */
+            /* 7.动画结束后的状态(默认为backwards回到起始状态,forwards为停留在结束撞他) */
+            animation-fill-mode: forwards;
+        }
+
+        .all {
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* 前面两个属性一定要写 */
+            animation: move 3s linear 0s 1 alternate forwards;
+        }
+
+        div:hover {
+            /* 鼠标经过div让动画停止 */
+            /* 8.动画停止(默认为running播放) */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all"></div>
+</body>
+
+</html>

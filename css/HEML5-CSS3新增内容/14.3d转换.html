@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d转换</title>
+    <style>
+        /* 1.translate移动 */
+        body {
+            /* 透视写到被观察元素的父盒子上面 */
+            /* 这里的值指的是眼睛离屏幕距离 */
+            perspective: 200px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* transform: translateX(100px) translateY(100px) translateZ(100px); */
+            transform: translate3d(0, 0, 0);
+            margin: 100px auto;
+            transition: all 2s linear;
+        }
+
+        div:hover {
+            transform: translateZ(200px);
+        }
+
+        /* 2.rotate旋转 */
+        img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 100px auto;
+            transition: all 1.5s;
+        }
+
+        img:hover {
+            /* transform: rotateX(45deg); */
+            /* transform: rotateY(180deg); */
+            /* transform: rotateZ(180deg); */
+            transform: rotate3d(1, 1, 0, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <img src="../images/abcd.jpg" alt="">
+</body>
+
+</html>
